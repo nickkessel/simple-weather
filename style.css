@@ -1,0 +1,16 @@
+html {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  text-align: center;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.add {
+  border: 5px outset red;
+  font-size: 25px;
+  text-align: left;
+  width:200px;
+}
