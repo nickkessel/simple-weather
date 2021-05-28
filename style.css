@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  margin:  auto;
+
 }
 
 .add {
@@ -25,4 +25,8 @@ body {
   margin: auto;
   margin-top: 30px;
   background: white;
+}
+
+.button {
+  margin-top: 20px;
 }

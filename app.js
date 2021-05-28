@@ -38,10 +38,12 @@ function getWeather() {
         minmax.innerHTML = "The high today is " + Math.round(data.main.temp_max) + ", and the low is " + Math.round(data.main.temp_min) + ".";
         stats.innerHTML = "Humidity: " + data.main.humidity + "%" + "<br>" + "Pressure: " + data.main.pressure + "mb" + "<br>" + "Wind speed: " + Math.round(data.wind.speed) + " mph" + "<br>" + "Wind gusts: " + Math.round(data.wind.gust) + " mph";
         if(cond = "Clouds") {
-          document.getElementById("body").style.background= "silver";
+          body.style.background= "silver";
+        } else if(cond = "Rain") {
+          body.style.background = "lightskyblue";
         }
-        else if(cond = "Rain") {
-          document.getElementById("body").style.background = "blue";
+        else {
+          body.style.backgroun = "red";
         }
       });
   }
