@@ -12,8 +12,10 @@ body {
   border: 5px solid paleturquoise;
   font-size: 25px;
   text-align: center;
-  width:200px;
+  width:500px;
+  height: 60px;
   border-radius: 20px;
+  padding-bottom: 20;
   margin: auto;
   background: white;
 }
@@ -25,6 +27,7 @@ body {
   margin: auto;
   margin-top: 30px;
   background: white;
+  font-size: 20px;
 }
 
 .button {
