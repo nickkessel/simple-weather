@@ -12,7 +12,7 @@ body {
   border: 5px solid paleturquoise;
   font-size: 25px;
   text-align: center;
-  width:500px;
+  width:700;
   height: 60px;
   border-radius: 20px;
   padding-bottom: 20;
@@ -30,6 +30,23 @@ body {
   font-size: 20px;
 }
 
-.button {
+.future {
+  //border: 5px solid lime;
+  border-radius: 10px;
+  width:1000px;
+  margin-left: 20px;
   margin-top: 20px;
+  margin: auto;
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(255,243,216,1) 100%);
+}
+
+.future-head {
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+.futurecast {
+  font-size: 18.5px;
+  padding-bottom: 4px;
 }
