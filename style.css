@@ -5,7 +5,8 @@ html {
 }
 
 body {
-
+  background: rgb(222,222,222);
+ background: linear-gradient(5deg, rgba(222,222,222,1) 0%, rgba(145,145,145,1) 100%);
 }
 
 .add {
@@ -31,7 +32,7 @@ body {
 }
 
 .future {
-  //border: 5px solid lime;
+
   border-radius: 10px;
   width:1000px;
   margin-left: 20px;
@@ -42,11 +43,22 @@ body {
 }
 
 .future-head {
-  font-size: 30px;
-  font-family: sans-serif;
+
 }
 
 .futurecast {
-  font-size: 18.5px;
-  padding-bottom: 4px;
+  font-size: 20px;
+  padding-bottom: 0px;
+}
+
+.hourly-container {
+  margin: auto;
+  border-radius: 10px;
+  width: 1000px;
+  background: rgb(210,143,255);
+  background: linear-gradient(180deg, rgba(210,143,255,1) 0%, rgba(255,152,152,1) 50%, rgba(255,243,216,1) 100%);
+}
+
+.hourlycontent {
+  font-size: 20px;
 }

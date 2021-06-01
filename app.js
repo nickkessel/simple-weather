@@ -6,7 +6,30 @@ function getWeather() {
   let minmax = document.getElementById("minmax");
   let stats = document.getElementById("stats");
   let body = document.getElementById("body");
+  let future_head1 = document.getElementById("future-head1");
   let futurecast1 = document.getElementById("futurecast1");
+  let future_head2 = document.getElementById("future-head2");
+  let futurecast2 = document.getElementById("futurecast2");
+  let future_head3 = document.getElementById("future-head3");
+  let futurecast3 = document.getElementById("futurecast3");
+  let future_head4 = document.getElementById("future-head4");
+  let futurecast4 = document.getElementById("futurecast4");
+  let future_head5 = document.getElementById("future-head5");
+  let futurecast5 = document.getElementById("futurecast5");
+  let hourhead1 = document.getElementById("hourhead1");
+  let hourcontent1 = document.getElementById("hourcontent1");
+  let hourhead2 = document.getElementById("hourhead2");
+  let hourcontent2 = document.getElementById("hourcontent2");
+  let hourhead3 = document.getElementById("hourhead3");
+  let hourcontent3 = document.getElementById("hourcontent3");
+  let hourhead4 = document.getElementById("hourhead4");
+  let hourcontent4 = document.getElementById("hourcontent4");
+  let hourhead5 = document.getElementById("hourhead5");
+  let hourcontent5 = document.getElementById("hourcontent5");
+  let hourhead6 = document.getElementById("hourhead6");
+  let hourcontent6 = document.getElementById("hourcontent6");
+  let hourhead7 = document.getElementById("hourhead7");
+  let hourcontent7 = document.getElementById("hourcontent7");
 
   let api = "https://api.openweathermap.org/data/2.5/onecall";
   let apiKey = "9eb845f6ddd80a3a7314e134d5c9facb";
@@ -32,10 +55,11 @@ function getWeather() {
     fetch(url)
       .then(response => response.json())
       .then(data => {
+
         console.log(data);
         //current vars
         let c_temp = data.current.temp;
-        let c_cond = data.current.weather[0].main;
+        let c_cond = data.current.weather[0].description;
         let c_feels = data.current.feels_like;
         let c_pressure = data.current.pressure;
         let c_uv = data.current.uvi;
@@ -46,58 +70,185 @@ function getWeather() {
         let c_dewpoint = data.current.dew_point;
 
         //hourly vars
+        //hour 0 vars ( current)
+        let h_pop0 = data.hourly[0].pop;
+
+        //hour 1 vars
+        let h_temp1 = data.hourly[1].temp;
+        let h_feelslike1 = data.hourly[1].feels_like;
+        let h_pop1 = data.hourly[1].pop;
+        let h_wind1 = data.hourly[1].wind_speed;
+        let h_clouds = data.hourly[1].clouds;
+        let h_date_uf1 = new Date(data.hourly[1].dt * 1000);
+        let h_date1 = (" "+ h_date_uf1.getHours()+
+          ":"+h_date_uf1.getMinutes()+
+          h_date_uf1.getSeconds());
+
+        //hour 2 vars
+        let h_date_uf2 = new Date(data.hourly[2].dt * 1000);
+        let h_date2 = (" "+ h_date_uf2.getHours()+
+          ":"+h_date_uf2.getMinutes()+
+          h_date_uf2.getSeconds());
+
+        //hour 3 vars
+        let h_date_uf3 = new Date(data.hourly[3].dt * 1000);
+        let h_date3 = (" "+ h_date_uf3.getHours()+
+          ":"+h_date_uf3.getMinutes()+
+          h_date_uf3.getSeconds());
+
+        //hour 4 vars
+        let h_date_uf4 = new Date(data.hourly[4].dt * 1000);
+        let h_date4 = (" "+ h_date_uf4.getHours()+
+          ":"+h_date_uf4.getMinutes()+
+          h_date_uf4.getSeconds());
+
+        //hour 5 vars
+        let h_date_uf5 = new Date(data.hourly[5].dt * 1000);
+        let h_date5 = (" "+ h_date_uf5.getHours()+
+          ":"+h_date_uf5.getMinutes()+
+          h_date_uf5.getSeconds());
 
 
+        //hour 6 vars
+        let h_date_uf6 = new Date(data.hourly[6].dt * 1000);
+        let h_date6 = (" "+ h_date_uf6.getHours()+
+          ":"+h_date_uf6.getMinutes()+
+          h_date_uf6.getSeconds());
+
+        //hour 7 vars
+        let h_date_uf7 = new Date(data.hourly[7].dt * 1000);
+        let h_date7 = (" "+ h_date_uf7.getHours()+
+          ":"+h_date_uf7.getMinutes()+
+          h_date_uf7.getSeconds());
         //day 0 vars
         let d_max0 = data.daily[0].temp.max;
         let d_min0 = data.daily[0].temp.min;
+        let d_pop0 = data.daily[0].pop;
+
 
         //day 1 vars
         let d_max1 = data.daily[1].temp.max;
         let d_min1 = data.daily[1].temp.min;
         let d_pop1 = data.daily[1].pop;
+        let d_date1 = new Date(data.daily[1].dt * 1000);
 
         //day 2 vars
         let d_max2 = data.daily[2].temp.max;
         let d_min2 = data.daily[2].temp.min;
+        let d_pop2 = data.daily[2].pop;
+        let d_date_uf2 = new Date(data.daily[2].dt * 1000);
+        let d_date2 = (d_date_uf2.getMonth()+1)+
+          "/"+(d_date_uf2.getDate()+
+          "/"+d_date_uf2.getFullYear());
 
         //day 3 vars
         let d_max3 = data.daily[3].temp.max;
         let d_min3 = data.daily[3].temp.min;
+        let d_pop3 = data.daily[3].pop;
+        let d_date_uf3 = new Date(data.daily[3].dt * 1000);
+        let d_date3 = (d_date_uf3.getMonth()+1)+
+          "/"+(d_date_uf3.getDate()+
+          "/"+d_date_uf3.getFullYear());
 
         //day 4 vars
         let d_max4 = data.daily[4].temp.max;
         let d_min4 = data.daily[4].temp.min;
+        let d_pop4 = data.daily[4].pop;
+        let d_date_uf4 = new Date(data.daily[4].dt * 1000);
+        let d_date4 = (d_date_uf4.getMonth()+1)+
+          "/"+(d_date_uf4.getDate()+
+          "/"+d_date_uf4.getFullYear());
 
         //day 5 vars
         let d_max5 = data.daily[5].temp.max;
         let d_min5 = data.daily[5].temp.min;
+        let d_pop5 = data.daily[5].pop;
+        let d_date_uf5 = new Date(data.daily[5].dt * 1000);
+        let d_date5 = (d_date_uf5.getMonth()+1)+
+          "/"+(d_date_uf5.getDate()+
+          "/"+d_date_uf5.getFullYear());
 
         temperature.innerHTML = "Right now, it is " + Math.round(c_temp) + "°. It feels like " + Math.round(c_feels) + "°.";
         description.innerHTML = c_cond;
         minmax.innerHTML = "The high today is " + Math.round(d_max0) + ", the low is " + Math.round(d_min0) + ", and the dew point is " + Math.round(c_dewpoint) + ".";
         stats.innerHTML =
         "Humidity: " + c_humid + "%" + "<br>"
+         + "Chance of Rain: " + (h_pop0 * 100) + "%" + "<br>"
          + "Pressure: " + c_pressure + "mb" + "<br>"
          + "Wind speed: " + Math.round(c_wind) + " mph" + "<br>"
          + "Wind gusts: " + Math.round(c_windgust) + " mph" + "<br>"
          + "Cloud cover: " + c_cloudcover + "%" + "<br>"
          + "UV Index: " + Math.round(c_uv) + "<br>"
          ;
+         //hourly date time headers
+         hourhead1.innerHTML = h_date1;
 
-         futurecast1.innerHTML =
-         "High: " + Math.round(d_max1) + "°" + "<br>"
-         + "Low: " + Math.round(d_min1) + "°" + "<br>"
-         + "Chance of Rain: " + d_pop1 + "%" + "<br>"
+         hourhead2.innerHTML = h_date2;
+
+         hourhead3.innerHTML = h_date3;
+
+         hourhead4.innerHTML = h_date4;
+
+         hourhead5.innerHTML = h_date5;
+
+         hourhead6.innerHTML = h_date6;
+
+         hourhead7.innerHTML = h_date7;
+
+         //hourly description
+         hourcontent1.innerHTML =
+         "High: " + Math.round(h_temp1)
+         + "° | Feels like: " + Math.round(h_feelslike1)
+         + "° | Wind: " + Math.round(h_wind1) + "mph"
+         + " | Chance of rain: " + (h_pop1 * 100) + "%"
          ;
 
-        if(c_cond = "Clouds") {
-          body.style.background= "silver";
-        } else if(c_cond = "Rain") {
-          body.style.background = "lightskyblue";
-        } else {
-          body.style.background = "red";
-        }
+         //future description
+         futurecast1.innerHTML =
+         "High: " + Math.round(d_max1) + "°" + "  "
+         + "Low: " + Math.round(d_min1) + "°" + "<br>"
+         + "Chance of Rain: " + (d_pop1 * 100) + "%" + "<br>"
+         ;
+
+         futurecast2.innerHTML =
+         "High: " + Math.round(d_max2) + "°" + "  "
+         + "Low: " + Math.round(d_min2) + "°" + "<br>"
+         + "Chance of Rain: " + (d_pop2 * 100) + "%" + "<br>"
+         ;
+
+         futurecast3.innerHTML =
+         "High: " + Math.round(d_max3) + "°" + "  "
+         + "Low: " + Math.round(d_min3) + "°" + "<br>"
+         + "Chance of Rain: " + (d_pop3 * 100) + "%" + "<br>"
+         ;
+
+         futurecast4.innerHTML =
+         "High: " + Math.round(d_max4) + "°" + "  "
+         + "Low: " + Math.round(d_min4) + "°" + "<br>"
+         + "Chance of Rain: " + (d_pop4 * 100) + "%" + "<br>"
+         ;
+
+         futurecast5.innerHTML =
+         "High: " + Math.round(d_max5) + "°" + "  "
+         + "Low: " + Math.round(d_min5) + "°" + "<br>"
+         + "Chance of Rain: " + (d_pop5 * 100) + "%" + "<br>"
+         ;
+
+
+         //future headers and dates
+         future_head2.innerHTML = d_date2;
+
+
+         future_head3.innerHTML = d_date3;
+
+
+         future_head4.innerHTML = d_date4;
+
+
+         future_head5.innerHTML = d_date5;
+
+
+
       });
   }
   function error() {
