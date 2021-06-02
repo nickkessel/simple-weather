@@ -78,31 +78,51 @@ function getWeather() {
         let h_feelslike1 = data.hourly[1].feels_like;
         let h_pop1 = data.hourly[1].pop;
         let h_wind1 = data.hourly[1].wind_speed;
-        let h_clouds = data.hourly[1].clouds;
+        let h_clouds1 = data.hourly[1].clouds;
         let h_date_uf1 = new Date(data.hourly[1].dt * 1000);
         let h_date1 = (" "+ h_date_uf1.getHours()+
           ":"+h_date_uf1.getMinutes()+
           h_date_uf1.getSeconds());
 
         //hour 2 vars
+        let h_temp2 = data.hourly[2].temp;
+        let h_feelslike2 = data.hourly[2].feels_like;
+        let h_pop2 = data.hourly[2].pop;
+        let h_wind2 = data.hourly[2].wind_speed;
+        let h_clouds2 = data.hourly[2].clouds;
         let h_date_uf2 = new Date(data.hourly[2].dt * 1000);
         let h_date2 = (" "+ h_date_uf2.getHours()+
           ":"+h_date_uf2.getMinutes()+
           h_date_uf2.getSeconds());
 
         //hour 3 vars
+        let h_temp3 = data.hourly[3].temp;
+        let h_feelslike3 = data.hourly[3].feels_like;
+        let h_pop3 = data.hourly[3].pop;
+        let h_wind3 = data.hourly[3].wind_speed;
+        let h_clouds3 = data.hourly[3].clouds;
         let h_date_uf3 = new Date(data.hourly[3].dt * 1000);
         let h_date3 = (" "+ h_date_uf3.getHours()+
           ":"+h_date_uf3.getMinutes()+
           h_date_uf3.getSeconds());
 
         //hour 4 vars
+        let h_temp4 = data.hourly[4].temp;
+        let h_feelslike4 = data.hourly[4].feels_like;
+        let h_pop4 = data.hourly[4].pop;
+        let h_wind4 = data.hourly[4].wind_speed;
+        let h_clouds4 = data.hourly[4].clouds;
         let h_date_uf4 = new Date(data.hourly[4].dt * 1000);
         let h_date4 = (" "+ h_date_uf4.getHours()+
           ":"+h_date_uf4.getMinutes()+
           h_date_uf4.getSeconds());
 
         //hour 5 vars
+        let h_temp5 = data.hourly[5].temp;
+        let h_feelslike5 = data.hourly[5].feels_like;
+        let h_pop5 = data.hourly[5].pop;
+        let h_wind5 = data.hourly[5].wind_speed;
+        let h_clouds5 = data.hourly[5].clouds;
         let h_date_uf5 = new Date(data.hourly[5].dt * 1000);
         let h_date5 = (" "+ h_date_uf5.getHours()+
           ":"+h_date_uf5.getMinutes()+
@@ -110,12 +130,22 @@ function getWeather() {
 
 
         //hour 6 vars
+        let h_temp6 = data.hourly[6].temp;
+        let h_feelslike6 = data.hourly[6].feels_like;
+        let h_pop6 = data.hourly[6].pop;
+        let h_wind6 = data.hourly[6].wind_speed;
+        let h_clouds6 = data.hourly[6].clouds;
         let h_date_uf6 = new Date(data.hourly[6].dt * 1000);
         let h_date6 = (" "+ h_date_uf6.getHours()+
           ":"+h_date_uf6.getMinutes()+
           h_date_uf6.getSeconds());
 
         //hour 7 vars
+        let h_temp7 = data.hourly[7].temp;
+        let h_feelslike7 = data.hourly[7].feels_like;
+        let h_pop7 = data.hourly[7].pop;
+        let h_wind7 = data.hourly[7].wind_speed;
+        let h_clouds7 = data.hourly[7].clouds;
         let h_date_uf7 = new Date(data.hourly[7].dt * 1000);
         let h_date7 = (" "+ h_date_uf7.getHours()+
           ":"+h_date_uf7.getMinutes()+
@@ -197,10 +227,52 @@ function getWeather() {
 
          //hourly description
          hourcontent1.innerHTML =
-         "High: " + Math.round(h_temp1)
+         Math.round(h_temp1)
          + "° | Feels like: " + Math.round(h_feelslike1)
          + "° | Wind: " + Math.round(h_wind1) + "mph"
          + " | Chance of rain: " + (h_pop1 * 100) + "%"
+         ;
+
+         hourcontent2.innerHTML =
+         Math.round(h_temp2)
+         + "° | Feels like: " + Math.round(h_feelslike2)
+         + "° | Wind: " + Math.round(h_wind2) + "mph"
+         + " | Chance of rain: " + (h_pop2 * 100) + "%"
+         ;
+
+         hourcontent3.innerHTML =
+         Math.round(h_temp3)
+         + "° | Feels like: " + Math.round(h_feelslike3)
+         + "° | Wind: " + Math.round(h_wind3) + "mph"
+         + " | Chance of rain: " + (h_pop3 * 100) + "%"
+         ;
+
+         hourcontent4.innerHTML =
+         Math.round(h_temp4)
+         + "° | Feels like: " + Math.round(h_feelslike4)
+         + "° | Wind: " + Math.round(h_wind4) + "mph"
+         + " | Chance of rain: " + (h_pop4 * 100) + "%"
+         ;
+
+         hourcontent5.innerHTML =
+         Math.round(h_temp5)
+         + "° | Feels like: " + Math.round(h_feelslike5)
+         + "° | Wind: " + Math.round(h_wind5) + "mph"
+         + " | Chance of rain: " + (h_pop5 * 100) + "%"
+         ;
+
+         hourcontent6.innerHTML =
+         Math.round(h_temp6)
+         + "° | Feels like: " + Math.round(h_feelslike6)
+         + "° | Wind: " + Math.round(h_wind6) + "mph"
+         + " | Chance of rain: " + (h_pop6 * 100) + "%"
+         ;
+
+         hourcontent7.innerHTML =
+         Math.round(h_temp7)
+         + "° | Feels like: " + Math.round(h_feelslike7)
+         + "° | Wind: " + Math.round(h_wind7) + "mph"
+         + " | Chance of rain: " + (h_pop7 * 100) + "%"
          ;
 
          //future description
@@ -234,20 +306,14 @@ function getWeather() {
          + "Chance of Rain: " + (d_pop5 * 100) + "%" + "<br>"
          ;
 
-
          //future headers and dates
          future_head2.innerHTML = d_date2;
 
-
          future_head3.innerHTML = d_date3;
-
 
          future_head4.innerHTML = d_date4;
 
-
          future_head5.innerHTML = d_date5;
-
-
 
       });
   }
