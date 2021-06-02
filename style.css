@@ -5,8 +5,8 @@ html {
 }
 
 body {
-  background: rgb(222,222,222);
- background: linear-gradient(5deg, rgba(222,222,222,1) 0%, rgba(145,145,145,1) 100%);
+  background: rgb(167,173,255);
+ background: linear-gradient(0deg, rgba(167,173,255,1) 0%, rgba(187,248,255,1) 100%);
 }
 
 .add {
@@ -62,4 +62,8 @@ body {
 .hourlycontent {
   font-size: 20px;
   padding-bottom: 5px;
+}
+
+.foot {
+  font-family: serif;
 }
