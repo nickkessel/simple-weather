@@ -6,6 +6,7 @@ function getWeather() {
   let minmax = document.getElementById("minmax");
   let stats = document.getElementById("stats");
   let body = document.getElementById("body");
+
   let future_head1 = document.getElementById("future-head1");
   let futurecast1 = document.getElementById("futurecast1");
   let future_head2 = document.getElementById("future-head2");
@@ -17,6 +18,7 @@ function getWeather() {
   let future_head5 = document.getElementById("future-head5");
   let futurecast5 = document.getElementById("futurecast5");
   let hourhead1 = document.getElementById("hourhead1");
+
   let hourcontent1 = document.getElementById("hourcontent1");
   let hourhead2 = document.getElementById("hourhead2");
   let hourcontent2 = document.getElementById("hourcontent2");
@@ -30,6 +32,15 @@ function getWeather() {
   let hourcontent6 = document.getElementById("hourcontent6");
   let hourhead7 = document.getElementById("hourhead7");
   let hourcontent7 = document.getElementById("hourcontent7");
+
+  let addhourcontent1 = document.getElementById("addhourcontent1");
+  let addhourcontent2 = document.getElementById("addhourcontent2");
+  let addhourcontent3 = document.getElementById("addhourcontent3");
+  let addhourcontent4 = document.getElementById("addhourcontent4");
+  let addhourcontent5 = document.getElementById("addhourcontent5");
+  let addhourcontent6 = document.getElementById("addhourcontent6");
+  let addhourcontent7 = document.getElementById("addhourcontent7");
+
 
   let api = "https://api.openweathermap.org/data/2.5/onecall";
   let apiKey = "9eb845f6ddd80a3a7314e134d5c9facb";
@@ -79,6 +90,7 @@ function getWeather() {
         let h_pop1 = data.hourly[1].pop;
         let h_wind1 = data.hourly[1].wind_speed;
         let h_clouds1 = data.hourly[1].clouds;
+        let h_humid1 = data.hourly[1].humidity;
         let h_date_uf1 = new Date(data.hourly[1].dt * 1000);
         let h_date1 = (" "+ h_date_uf1.getHours()+
           ":"+h_date_uf1.getMinutes()+
@@ -90,6 +102,7 @@ function getWeather() {
         let h_pop2 = data.hourly[2].pop;
         let h_wind2 = data.hourly[2].wind_speed;
         let h_clouds2 = data.hourly[2].clouds;
+        let h_humid2 = data.hourly[2].humidity;
         let h_date_uf2 = new Date(data.hourly[2].dt * 1000);
         let h_date2 = (" "+ h_date_uf2.getHours()+
           ":"+h_date_uf2.getMinutes()+
@@ -101,6 +114,7 @@ function getWeather() {
         let h_pop3 = data.hourly[3].pop;
         let h_wind3 = data.hourly[3].wind_speed;
         let h_clouds3 = data.hourly[3].clouds;
+        let h_humid3 = data.hourly[3].humidity;
         let h_date_uf3 = new Date(data.hourly[3].dt * 1000);
         let h_date3 = (" "+ h_date_uf3.getHours()+
           ":"+h_date_uf3.getMinutes()+
@@ -112,6 +126,7 @@ function getWeather() {
         let h_pop4 = data.hourly[4].pop;
         let h_wind4 = data.hourly[4].wind_speed;
         let h_clouds4 = data.hourly[4].clouds;
+        let h_humid4 = data.hourly[4].humidity;
         let h_date_uf4 = new Date(data.hourly[4].dt * 1000);
         let h_date4 = (" "+ h_date_uf4.getHours()+
           ":"+h_date_uf4.getMinutes()+
@@ -123,6 +138,7 @@ function getWeather() {
         let h_pop5 = data.hourly[5].pop;
         let h_wind5 = data.hourly[5].wind_speed;
         let h_clouds5 = data.hourly[5].clouds;
+        let h_humid5 = data.hourly[5].humidity;
         let h_date_uf5 = new Date(data.hourly[5].dt * 1000);
         let h_date5 = (" "+ h_date_uf5.getHours()+
           ":"+h_date_uf5.getMinutes()+
@@ -135,6 +151,7 @@ function getWeather() {
         let h_pop6 = data.hourly[6].pop;
         let h_wind6 = data.hourly[6].wind_speed;
         let h_clouds6 = data.hourly[6].clouds;
+        let h_humid6 = data.hourly[6].humidity;
         let h_date_uf6 = new Date(data.hourly[6].dt * 1000);
         let h_date6 = (" "+ h_date_uf6.getHours()+
           ":"+h_date_uf6.getMinutes()+
@@ -146,6 +163,7 @@ function getWeather() {
         let h_pop7 = data.hourly[7].pop;
         let h_wind7 = data.hourly[7].wind_speed;
         let h_clouds7 = data.hourly[7].clouds;
+        let h_humid7 = data.hourly[7].humidity;
         let h_date_uf7 = new Date(data.hourly[7].dt * 1000);
         let h_date7 = (" "+ h_date_uf7.getHours()+
           ":"+h_date_uf7.getMinutes()+
@@ -154,7 +172,6 @@ function getWeather() {
         let d_max0 = data.daily[0].temp.max;
         let d_min0 = data.daily[0].temp.min;
         let d_pop0 = data.daily[0].pop;
-
 
         //day 1 vars
         let d_max1 = data.daily[1].temp.max;
@@ -198,6 +215,7 @@ function getWeather() {
           "/"+(d_date_uf5.getDate()+
           "/"+d_date_uf5.getFullYear());
 
+          //main stuff
         temperature.innerHTML = "Right now, it is " + Math.round(c_temp) + "°. It feels like " + Math.round(c_feels) + "°.";
         description.innerHTML = c_cond;
         minmax.innerHTML = "The high today is " + Math.round(d_max0) + ", the low is " + Math.round(d_min0) + ", and the dew point is " + Math.round(c_dewpoint) + ".";
@@ -275,6 +293,42 @@ function getWeather() {
          + " | Chance of rain: " + (h_pop7 * 100) + "%"
          ;
 
+         //hourly additional stuff
+         addhourcontent1.innerHTML =
+         "Cloud cover: " + h_clouds1 + "%"
+         + " | Humidity: " + h_humid1 + "%"
+         ;
+
+         addhourcontent2.innerHTML =
+         "Cloud cover: " + h_clouds2 + "%"
+         + " | Humidity: " + h_humid2 + "%"
+         ;
+
+         addhourcontent3.innerHTML =
+         "Cloud cover: " + h_clouds3 + "%"
+         + " | Humidity: " + h_humid3 + "%"
+         ;
+
+         addhourcontent4.innerHTML =
+         "Cloud cover: " + h_clouds4 + "%"
+         + " | Humidity: " + h_humid4 + "%"
+         ;
+
+         addhourcontent5.innerHTML =
+         "Cloud cover: " + h_clouds5 + "%"
+         + " | Humidity: " + h_humid5 + "%"
+         ;
+
+         addhourcontent6.innerHTML =
+         "Cloud cover: " + h_clouds6 + "%"
+         + " | Humidity: " + h_humid6 + "%"
+         ;
+
+         addhourcontent7.innerHTML =
+         "Cloud cover: " + h_clouds7 + "%"
+         + " | Humidity: " + h_humid7 + "%"
+         ;
+
          //future description
          futurecast1.innerHTML =
          "High: " + Math.round(d_max1) + "°" + "  "
@@ -318,7 +372,7 @@ function getWeather() {
       });
   }
   function error() {
-    console.log("error");
+    console.log("oopises! no workie :/ me angy");
   }
 }
 

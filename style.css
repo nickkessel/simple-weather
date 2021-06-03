@@ -10,20 +10,18 @@ body {
 }
 
 .add {
-  border: 5px solid paleturquoise;
+
   font-size: 25px;
   text-align: center;
   width:700;
   height: 60px;
-  border-radius: 20px;
-  padding-bottom: 20;
+  border-radius: 20px 1px;
   margin: auto;
   background: white;
 }
 
 .stats {
-  border: 5px solid paleturquoise;
-  border-radius: 20px;
+  border-radius: 20px 5px;
   width: 200px;
   margin: auto;
   margin-top: 30px;
@@ -40,10 +38,6 @@ body {
   margin: auto;
   background: rgb(34,193,195);
   background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(255,243,216,1) 100%);
-}
-
-.future-head {
-
 }
 
 .futurecast {
@@ -65,5 +59,6 @@ body {
 }
 
 .foot {
-  font-family: serif;
+  font-family: monospace;
+  font-color: black;
 }
