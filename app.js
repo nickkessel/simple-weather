@@ -248,49 +248,49 @@ function getWeather() {
          Math.round(h_temp1)
          + "° | Feels like: " + Math.round(h_feelslike1)
          + "° | Wind: " + Math.round(h_wind1) + "mph"
-         + " | Chance of rain: " + (h_pop1 * 100) + "%"
+         + " | Chance of rain: " + Math.round((h_pop1 * 100)) + "%"
          ;
 
          hourcontent2.innerHTML =
          Math.round(h_temp2)
          + "° | Feels like: " + Math.round(h_feelslike2)
          + "° | Wind: " + Math.round(h_wind2) + "mph"
-         + " | Chance of rain: " + (h_pop2 * 100) + "%"
+         + " | Chance of rain: " + Math.round((h_pop2 * 100)) + "%"
          ;
 
          hourcontent3.innerHTML =
          Math.round(h_temp3)
          + "° | Feels like: " + Math.round(h_feelslike3)
          + "° | Wind: " + Math.round(h_wind3) + "mph"
-         + " | Chance of rain: " + (h_pop3 * 100) + "%"
+         + " | Chance of rain: " + Math.round((h_pop3 * 100)) + "%"
          ;
 
          hourcontent4.innerHTML =
          Math.round(h_temp4)
          + "° | Feels like: " + Math.round(h_feelslike4)
          + "° | Wind: " + Math.round(h_wind4) + "mph"
-         + " | Chance of rain: " + (h_pop4 * 100) + "%"
+         + " | Chance of rain: " + Math.round((h_pop4 * 100)) + "%"
          ;
 
          hourcontent5.innerHTML =
          Math.round(h_temp5)
          + "° | Feels like: " + Math.round(h_feelslike5)
          + "° | Wind: " + Math.round(h_wind5) + "mph"
-         + " | Chance of rain: " + (h_pop5 * 100) + "%"
+         + " | Chance of rain: " + Math.round((h_pop5 * 100)) + "%"
          ;
 
          hourcontent6.innerHTML =
          Math.round(h_temp6)
          + "° | Feels like: " + Math.round(h_feelslike6)
          + "° | Wind: " + Math.round(h_wind6) + "mph"
-         + " | Chance of rain: " + (h_pop6 * 100) + "%"
+         + " | Chance of rain: " + Math.round((h_pop6 * 100)) + "%"
          ;
 
          hourcontent7.innerHTML =
          Math.round(h_temp7)
          + "° | Feels like: " + Math.round(h_feelslike7)
          + "° | Wind: " + Math.round(h_wind7) + "mph"
-         + " | Chance of rain: " + (h_pop7 * 100) + "%"
+         + " | Chance of rain: " + Math.round((h_pop7 * 100)) + "%"
          ;
 
          //hourly additional stuff
@@ -333,31 +333,31 @@ function getWeather() {
          futurecast1.innerHTML =
          "High: " + Math.round(d_max1) + "°" + "  "
          + "Low: " + Math.round(d_min1) + "°" + "<br>"
-         + "Chance of Rain: " + (d_pop1 * 100) + "%" + "<br>"
+         + "Chance of Rain: " + Math.round((d_pop1 * 100)) + "%" + "<br>"
          ;
 
          futurecast2.innerHTML =
          "High: " + Math.round(d_max2) + "°" + "  "
          + "Low: " + Math.round(d_min2) + "°" + "<br>"
-         + "Chance of Rain: " + (d_pop2 * 100) + "%" + "<br>"
+         + "Chance of Rain: " + Math.round((d_pop2 * 100)) + "%" + "<br>"
          ;
 
          futurecast3.innerHTML =
          "High: " + Math.round(d_max3) + "°" + "  "
          + "Low: " + Math.round(d_min3) + "°" + "<br>"
-         + "Chance of Rain: " + (d_pop3 * 100) + "%" + "<br>"
+         + "Chance of Rain: " + Math.round((d_pop3 * 100)) + "%" + "<br>"
          ;
 
          futurecast4.innerHTML =
          "High: " + Math.round(d_max4) + "°" + "  "
          + "Low: " + Math.round(d_min4) + "°" + "<br>"
-         + "Chance of Rain: " + (d_pop4 * 100) + "%" + "<br>"
+         + "Chance of Rain: " + Math.round((d_pop4 * 100)) + "%" + "<br>"
          ;
 
          futurecast5.innerHTML =
          "High: " + Math.round(d_max5) + "°" + "  "
          + "Low: " + Math.round(d_min5) + "°" + "<br>"
-         + "Chance of Rain: " + (d_pop5 * 100) + "%" + "<br>"
+         + "Chance of Rain: " + Math.round((d_pop5 * 100)) + "%" + "<br>"
          ;
 
          //future headers and dates

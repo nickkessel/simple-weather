@@ -5,8 +5,8 @@ html {
 }
 
 body {
-  background: rgb(167,173,255);
- background: linear-gradient(0deg, rgba(167,173,255,1) 0%, rgba(187,248,255,1) 100%);
+  background: rgb(118,119,128);
+ background: linear-gradient(0deg, rgba(118,119,128,1) 0%, rgba(152,154,172,1) 5%, rgba(169,193,224,1) 100%); 
 }
 
 .add {
