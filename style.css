@@ -9,9 +9,12 @@ body {
  background: linear-gradient(0deg, rgba(118,119,128,1) 0%, rgba(152,154,172,1) 5%, rgba(169,193,224,1) 100%);
 }
 
+.temp {
+  font-size: 3.5vmax;
+}
 .add {
 
-  font-size: 25px;
+  font-size: 2.5vmax;
   text-align: center;
   width:90vw;
   height: auto;
@@ -23,11 +26,11 @@ body {
 
 .stats {
   border-radius: 20px 5px;
-  width: 200px;
+  width: 90vw;
   margin: auto;
   margin-top: 30px;
   background: white;
-  font-size: 20px;
+  font-size: 2vmax;;
 }
 
 .future {
@@ -60,6 +63,10 @@ body {
 .hourlycontent {
   font-size: 2vmax;
   padding-bottom: 5px;
+}
+
+.addhourcontent {
+  font-size: 1.65vmax;
 }
 
 .hourhead {

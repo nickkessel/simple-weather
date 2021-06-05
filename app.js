@@ -91,6 +91,9 @@ function getWeather() {
         let h_wind1 = data.hourly[1].wind_speed;
         let h_clouds1 = data.hourly[1].clouds;
         let h_humid1 = data.hourly[1].humidity;
+        let h_gusts1 = data.hourly[1].wind_gust;
+        let h_uv1 = data.hourly[1].uvi;
+        let h_cond1 = data.hourly[1].weather[0].main;
         let h_date_uf1 = new Date(data.hourly[1].dt * 1000);
         let h_date1 = (" "+ h_date_uf1.getHours()+
           ":"+h_date_uf1.getMinutes()+
@@ -103,6 +106,9 @@ function getWeather() {
         let h_wind2 = data.hourly[2].wind_speed;
         let h_clouds2 = data.hourly[2].clouds;
         let h_humid2 = data.hourly[2].humidity;
+        let h_gusts2 = data.hourly[2].wind_gust;
+        let h_uv2 = data.hourly[2].uvi;
+        let h_cond2 = data.hourly[2].weather[0].main;
         let h_date_uf2 = new Date(data.hourly[2].dt * 1000);
         let h_date2 = (" "+ h_date_uf2.getHours()+
           ":"+h_date_uf2.getMinutes()+
@@ -115,6 +121,9 @@ function getWeather() {
         let h_wind3 = data.hourly[3].wind_speed;
         let h_clouds3 = data.hourly[3].clouds;
         let h_humid3 = data.hourly[3].humidity;
+        let h_gusts3 = data.hourly[3].wind_gust;
+        let h_uv3 = data.hourly[3].uvi;
+        let h_cond3 = data.hourly[3].weather[0].main;
         let h_date_uf3 = new Date(data.hourly[3].dt * 1000);
         let h_date3 = (" "+ h_date_uf3.getHours()+
           ":"+h_date_uf3.getMinutes()+
@@ -127,6 +136,9 @@ function getWeather() {
         let h_wind4 = data.hourly[4].wind_speed;
         let h_clouds4 = data.hourly[4].clouds;
         let h_humid4 = data.hourly[4].humidity;
+        let h_gusts4 = data.hourly[4].wind_gust;
+        let h_uv4 = data.hourly[4].uvi;
+        let h_cond4 = data.hourly[4].weather[0].main;
         let h_date_uf4 = new Date(data.hourly[4].dt * 1000);
         let h_date4 = (" "+ h_date_uf4.getHours()+
           ":"+h_date_uf4.getMinutes()+
@@ -139,6 +151,9 @@ function getWeather() {
         let h_wind5 = data.hourly[5].wind_speed;
         let h_clouds5 = data.hourly[5].clouds;
         let h_humid5 = data.hourly[5].humidity;
+        let h_gusts5 = data.hourly[5].wind_gust;
+        let h_uv5 = data.hourly[5].uvi;
+        let h_cond5 = data.hourly[5].weather[0].main;
         let h_date_uf5 = new Date(data.hourly[5].dt * 1000);
         let h_date5 = (" "+ h_date_uf5.getHours()+
           ":"+h_date_uf5.getMinutes()+
@@ -152,6 +167,9 @@ function getWeather() {
         let h_wind6 = data.hourly[6].wind_speed;
         let h_clouds6 = data.hourly[6].clouds;
         let h_humid6 = data.hourly[6].humidity;
+        let h_gusts6 = data.hourly[6].wind_gust;
+        let h_uv6 = data.hourly[6].uvi;
+        let h_cond6 = data.hourly[6].weather[0].main;
         let h_date_uf6 = new Date(data.hourly[6].dt * 1000);
         let h_date6 = (" "+ h_date_uf6.getHours()+
           ":"+h_date_uf6.getMinutes()+
@@ -164,6 +182,9 @@ function getWeather() {
         let h_wind7 = data.hourly[7].wind_speed;
         let h_clouds7 = data.hourly[7].clouds;
         let h_humid7 = data.hourly[7].humidity;
+        let h_gusts7 = data.hourly[7].wind_gust;
+        let h_uv7 = data.hourly[7].uvi;
+        let h_cond7 = data.hourly[7].weather[0].main;
         let h_date_uf7 = new Date(data.hourly[7].dt * 1000);
         let h_date7 = (" "+ h_date_uf7.getHours()+
           ":"+h_date_uf7.getMinutes()+
@@ -246,49 +267,49 @@ function getWeather() {
          //hourly description
          hourcontent1.innerHTML =
          Math.round(h_temp1)
-         + "° | Feels like: " + Math.round(h_feelslike1)
+         + "° and " + h_cond1 + " | Feels like: " + Math.round(h_feelslike1)
          + "° | Wind: " + Math.round(h_wind1) + "mph"
          + " | Chance of rain: " + Math.round((h_pop1 * 100)) + "%"
          ;
 
          hourcontent2.innerHTML =
          Math.round(h_temp2)
-         + "° | Feels like: " + Math.round(h_feelslike2)
+         + "° and " + h_cond2 + " | Feels like: " + Math.round(h_feelslike2)
          + "° | Wind: " + Math.round(h_wind2) + "mph"
          + " | Chance of rain: " + Math.round((h_pop2 * 100)) + "%"
          ;
 
          hourcontent3.innerHTML =
          Math.round(h_temp3)
-         + "° | Feels like: " + Math.round(h_feelslike3)
+         + "° and " + h_cond3 + " | Feels like: " + Math.round(h_feelslike3)
          + "° | Wind: " + Math.round(h_wind3) + "mph"
          + " | Chance of rain: " + Math.round((h_pop3 * 100)) + "%"
          ;
 
          hourcontent4.innerHTML =
          Math.round(h_temp4)
-         + "° | Feels like: " + Math.round(h_feelslike4)
+         + "° and " + h_cond4 + " | Feels like: " + Math.round(h_feelslike4)
          + "° | Wind: " + Math.round(h_wind4) + "mph"
          + " | Chance of rain: " + Math.round((h_pop4 * 100)) + "%"
          ;
 
          hourcontent5.innerHTML =
          Math.round(h_temp5)
-         + "° | Feels like: " + Math.round(h_feelslike5)
+         + "° and " + h_cond5 + " | Feels like: " + Math.round(h_feelslike5)
          + "° | Wind: " + Math.round(h_wind5) + "mph"
          + " | Chance of rain: " + Math.round((h_pop5 * 100)) + "%"
          ;
 
          hourcontent6.innerHTML =
          Math.round(h_temp6)
-         + "° | Feels like: " + Math.round(h_feelslike6)
+         + "° and " + h_cond6 + " | Feels like: " + Math.round(h_feelslike6)
          + "° | Wind: " + Math.round(h_wind6) + "mph"
          + " | Chance of rain: " + Math.round((h_pop6 * 100)) + "%"
          ;
 
          hourcontent7.innerHTML =
          Math.round(h_temp7)
-         + "° | Feels like: " + Math.round(h_feelslike7)
+        + "° and " + h_cond7 + " | Feels like: " + Math.round(h_feelslike7)
          + "° | Wind: " + Math.round(h_wind7) + "mph"
          + " | Chance of rain: " + Math.round((h_pop7 * 100)) + "%"
          ;
@@ -297,36 +318,50 @@ function getWeather() {
          addhourcontent1.innerHTML =
          "Cloud cover: " + h_clouds1 + "%"
          + " | Humidity: " + h_humid1 + "%"
+         + " | UV Index: " + Math.round(h_uv1)
+         + " | Wind gusts: " + Math.round(h_gusts1) + "mph"
          ;
 
          addhourcontent2.innerHTML =
          "Cloud cover: " + h_clouds2 + "%"
          + " | Humidity: " + h_humid2 + "%"
+         + " | UV Index: " + Math.round(h_uv2)
+         + " | Wind gusts: " + Math.round(h_gusts2) + "mph"
          ;
 
          addhourcontent3.innerHTML =
          "Cloud cover: " + h_clouds3 + "%"
          + " | Humidity: " + h_humid3 + "%"
+         + " | UV Index: " + Math.round(h_uv3)
+         + " | Wind gusts: " + Math.round(h_gusts3) + "mph"
          ;
 
          addhourcontent4.innerHTML =
          "Cloud cover: " + h_clouds4 + "%"
          + " | Humidity: " + h_humid4 + "%"
+         + " | UV Index: " + Math.round(h_uv4)
+         + " | Wind gusts: " + Math.round(h_gusts4) + "mph"
          ;
 
          addhourcontent5.innerHTML =
          "Cloud cover: " + h_clouds5 + "%"
          + " | Humidity: " + h_humid5 + "%"
+         + " | UV Index: " + Math.round(h_uv5)
+         + " | Wind gusts: " + Math.round(h_gusts5) + "mph"
          ;
 
          addhourcontent6.innerHTML =
          "Cloud cover: " + h_clouds6 + "%"
          + " | Humidity: " + h_humid6 + "%"
+         + " | UV Index: " + Math.round(h_uv6)
+         + " | Wind gusts: " + Math.round(h_gusts6) + "mph"
          ;
 
          addhourcontent7.innerHTML =
          "Cloud cover: " + h_clouds7 + "%"
          + " | Humidity: " + h_humid7 + "%"
+         + " | UV Index: " + Math.round(h_uv7)
+         + " | Wind gusts: " + Math.round(h_gusts7) + "mph"
          ;
 
          //future description
