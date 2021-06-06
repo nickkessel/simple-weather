@@ -20,10 +20,22 @@ radar map?
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-    <title>SimpleWeather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Home | SimpleWeather</title>
   </head>
 
   <body id="body">
+
+    <div class="topnav" id="myTopnav">
+      <a id="home" href = "index.html" >Home</a>
+      <a id="hourly" href = "hourly.html"  >Hourly</a>
+      <a id="daily" href = "daily.html"  >Daily</a>
+      <a href = "javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class ="fa fa-bars"></i>
+      </a>
+    </div>
+
       <div class="main">
         <h1 class="temp" id="temperature"></h1>
         <h2 id="description"></h2>
@@ -124,8 +136,18 @@ radar map?
         </div>
       </div>
       <script src="app.js"></script>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if ( x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
 
-      <footer class="foot" id="foot" > <p> <a href = "https://github.com/nickkessel">version 0.4.1 </p> <a href = "https://nickkessel.github.io"<p>this project was made by nick! </p> </footer>
+      <footer class="foot" id="foot" > <p> <a href = "https://github.com/nickkessel">version 0.4.5 </a> </p> <p>this project was made with ♥ by nick! </p> </footer>
   </body>
 
 
